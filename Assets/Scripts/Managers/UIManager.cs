@@ -36,7 +36,7 @@ public class UIManager : MonoSingleton<UIManager>
     public void GoldTextWrite()
     {
 
-        UIManager.Instance.CoinText.text = LevelManager.Instance.CoinValue.ToString();
+        CoinText.text = LevelManager.Instance.CoinValue.ToString();
     }
     public void LevelTextWrite()
     {

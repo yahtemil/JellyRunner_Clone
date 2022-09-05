@@ -7,13 +7,12 @@ public class ObstacleUnderProp : ObstacleMain
     public bool FinishPath;
     public override void ObstacleTrigger(PlayerControl playerControl)
     {
-        float val = playerControl.gameObject.transform.localScale.x;
-        float cal = (val - 1.5f) / 0.375f;
+        float val = MainPlayer.Instance.allAddedSmallBlobs.Count - 3;
         if (FinishPath)
         {
-            cal += 3;
+            val += 3;
         }
-        for (int i = 0; i < cal; i++)
+        for (int i = 0; i < val; i++)
         {
             playerControl.ObstacleLavaTrigger();
         }

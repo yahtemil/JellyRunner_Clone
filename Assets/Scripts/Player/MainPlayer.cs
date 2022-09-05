@@ -190,6 +190,10 @@ public class MainPlayer : MonoSingleton<MainPlayer>
             yield break;
         }
         SmallBlobCounter++;
+        if (SmallBlobCounter > allAddedSmallBlobs.Count)
+        {
+            yield break;
+        }
         BigBlob.gameObject.SetActive(true);
         BigBlob.gameObject.transform.DOKill();
         BigBlob.gameObject.transform.DOScale(Vector3.one * 0.75f + Vector3.one * (0.375f * SmallBlobCounter), 0.2f);

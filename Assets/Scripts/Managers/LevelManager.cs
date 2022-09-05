@@ -32,7 +32,7 @@ public class LevelManager : MonoSingleton<LevelManager>
             UIManager.Instance.ScoreTextXValue.gameObject.SetActive(true);
             UIManager.Instance.ScoreTextAddValue.gameObject.SetActive(true);
             UIManager.Instance.ScoreTextXValue.text = "x" + val.ToString();
-            UIManager.Instance.ScoreTextAddValue.text = "+" + CoinValue.ToString();
+            UIManager.Instance.ScoreTextAddValue.text = "+" + (AddCoinValue * val).ToString();
             StartCoroutine(FinishCoinAnim());
         }
     }
